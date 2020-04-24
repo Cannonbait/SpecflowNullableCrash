@@ -1,4 +1,5 @@
-﻿using NUnit.Framework;
+﻿using System.Collections.Generic;
+using NUnit.Framework;
 using TechTalk.SpecFlow;
 
 namespace SpecflowNullable
@@ -16,7 +17,7 @@ namespace SpecflowNullable
         }
 
         [Given(@"I have a table with an enum that is null")]
-        public void GivenIHaveATableWithAnEnumThatIsNull(PersonsFromTable person)
+        public void GivenIHaveATableWithAnEnumThatIsNull(IEnumerable<Person> persons)
         {
             Assert.That(false);
         }

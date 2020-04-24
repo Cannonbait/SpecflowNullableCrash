@@ -108,10 +108,10 @@ this.ScenarioInitialize(scenarioInfo);
                             "CauseOfDeath"});
                 table1.AddRow(new string[] {
                             "Peter",
-                            ""});
+                            "null"});
                 table1.AddRow(new string[] {
                             "Linda",
-                            ""});
+                            "null"});
 #line 8
  testRunner.Given("I have a table with an enum that is null", ((string)(null)), table1, "Given ");
 #line hidden

@@ -7,6 +7,6 @@
 Scenario: Add two numbers
 	Given I have a table with an enum that is null
 	| Name  | CauseOfDeath |
-	| Peter |              |
-	| Linda |              |
+	| Peter | null         |
+	| Linda | null         |
 	Then I want to be able to see some info

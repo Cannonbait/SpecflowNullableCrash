@@ -11,7 +11,7 @@ namespace SpecflowNullable
     {
 
         [StepArgumentTransformation]
-        public PersonsFromTable TransformTableToTaskDto(Table table)
+        public IEnumerable<Person> TransformTableToTaskDto(Table table)
         {
             var headerName = "CauseOfDeath";
             if (table.Header.Contains(headerName))
@@ -21,11 +21,7 @@ namespace SpecflowNullable
                     .ForEach(row => row[headerName] = null);
             }
 
-            return new PersonsFromTable()
-            {
-                Persons = table.CreateSet<Person>(),
-                Headers = table.Header
-            };
+            return table.CreateSet<Person>();
         }
     }
 }
